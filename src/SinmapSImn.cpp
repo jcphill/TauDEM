@@ -50,8 +50,8 @@ email:  dtarb@usu.edu
 int main(int argc,char **argv)  
 {
    char slopefile[MAXLN], scaterrainfile[MAXLN], scarminroadfile[MAXLN], scarmaxroadfile[MAXLN], tergridfile[MAXLN], terparfile[MAXLN], satfile[MAXLN], sincombinedfile[MAXLN];
-   *scarminroadfile = NULL;
-   *scarmaxroadfile = NULL;
+   *scarminroadfile = '\0';
+   *scarmaxroadfile = '\0';
    float Rminter = 0.0, Rmaxter = 0.0;
    float temp_par[2];
    double par[2];
