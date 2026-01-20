@@ -442,7 +442,7 @@ void tiffIO::write(long xstart, long ystart, long numRows, long numCols, void* s
 					MPI_Abort(MCW, 23);
 				}
 				VSIFPrintfL(vrtfile,"<VRTDataset rasterXSize=\"%ld\" rasterYSize=\"%ld\">\n",
-					totalX, totalY);
+					(long)totalX, (long)totalY);
 				VSIFPrintfL(vrtfile,"  <SRS>%s</SRS>\n", projref);
 				VSIFPrintfL(vrtfile,"  <Metadata><MDI key=\"AREA_OR_POINT\">Area</MDI></Metadata>\n");
 				GDALGetGeoTransform(copyfh, adfGeoTransform);
